@@ -1,3 +1,10 @@
+<?php
+
+require_once __DIR__ . '/Models/movie.php';
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
