@@ -1,7 +1,7 @@
 <?php
 
 
-class Movie {
+class movie {
 
     public $title;
 
@@ -16,7 +16,7 @@ class Movie {
         string $title,
         int $year,
         float $vote,
-        array $genre
+        genre $genre
     ){
         $this->title = $title;
         $this->year = $year;
