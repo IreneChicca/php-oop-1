@@ -20,8 +20,7 @@ $movie_4 = new movie("Scream", 2001 , 8.5, $movie_4_genre);
 $genre_test = new genre(["horror","thriller","mistery"]);
 
 
-var_dump($movie_2);
-
+$movies = [$movie_1,$movie_2,$movie_3,$movie_4];
 
 ?>
 
@@ -32,14 +31,38 @@ var_dump($movie_2);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Document</title>
 </head>
 
 <body>
 
-    <header></header>
+    <header>
 
-    <main></main>
+        <h1 class="text-center pt-4">~ My Movies ~</h1>
+    </header>
+
+    <main>
+        <div class="container d-flex flex-wrap justify-content-center p-4">
+
+            <?php foreach ($movies as $movie): ?>
+            <div class="card col-3 m-3 p-3 text-center">
+                <h4><?php echo $movie->title ?></h4>
+                <p>Anno <?php echo $movie->year ?></p>
+                <p>Voto <?php echo $movie->fixVote() ?></p>
+                <h6>Genere</h6>
+                <ul>
+                    <?php  foreach($movie->genre->genre as $gen): ?>
+                    <li><?php echo $gen  ?></li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
+
+            <?php endforeach; ?>
+
+        </div>
+    </main>
 
 </body>
 

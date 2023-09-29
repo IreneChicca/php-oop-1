@@ -11,6 +11,7 @@ class movie {
 
     public $genre;
 
+   
     public function __construct(
 
         string $title,
@@ -25,17 +26,17 @@ class movie {
     }
 
 
-    public function fixVote($vote){
+    public function fixVote(){
 
-        if($vote > 5){
+        if($this->vote > 5){
             
-           $fixedVote = floor($vote);
+           $fixedVote = floor($this->vote);
            return $fixedVote;
 
         }
         else {
 
-            $fixedVote = ceil($vote);
+            $fixedVote = ceil($this->vote);
             return $fixedVote;
         }
 

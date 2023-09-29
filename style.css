@@ -1,0 +1,13 @@
+header {
+  background-color: antiquewhite;
+  height: 100px;
+}
+
+main {
+  background-color: rgb(203, 207, 165);
+  height: calc(100vh - 100px);
+}
+
+* {
+  box-sizing: border-box;
+}
