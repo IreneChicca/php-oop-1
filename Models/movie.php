@@ -25,6 +25,24 @@ class Movie {
     }
 
 
+    public function fixVote($vote){
+
+        if($vote > 5){
+            
+           $fixedVote = floor($vote);
+           return $fixedVote;
+
+        }
+        else {
+
+            $fixedVote = ceil($vote);
+            return $fixedVote;
+        }
+
+    }
+
+
+
 }
 
 
