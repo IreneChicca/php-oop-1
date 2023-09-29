@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/Models/movie.php';
+require_once __DIR__ . '/Models/genre.php';
 
 $movie_1 = new movie("Il signore degli anelli", 2001 , 9.4, ["fantasy","action"]);
 
