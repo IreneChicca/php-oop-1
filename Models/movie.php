@@ -14,8 +14,8 @@ class Movie {
     public function __construct(
 
         string $title,
-        integer $year,
-        integer $vote,
+        int $year,
+        float $vote,
         array $genre
     ){
         $this->title = $title;
