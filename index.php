@@ -9,18 +9,19 @@ $movie_2_genre = new genre(["fantasy","action","magic"]);
 $movie_3_genre = new genre(["action","thriller","drama"]);
 $movie_4_genre = new genre(["horror","thriller","mistery"]);
 
-$movie_1 = new movie("Il signore degli anelli", 2001 , 9.4, $movie_1_genre);
+$movie_1 = new movie("Il signore degli anelli", 9.4, $movie_1_genre, 2001, 203);
 
-$movie_2 = new movie("Harry Potter", 2001 , 9.2, $movie_2_genre);
+// $movie_2 = new movie("Harry Potter", 2001 , 9.2, $movie_2_genre);
 
-$movie_3 = new movie("Scarface", 1983 , 8.9, $movie_3_genre);
+// $movie_3 = new movie("Scarface", 1983 , 8.9, $movie_3_genre);
 
-$movie_4 = new movie("Scream", 2001 , 8.5, $movie_4_genre);
+// $movie_4 = new movie("Scream", 2001 , 8.5, $movie_4_genre);
 
 $genre_test = new genre(["horror","thriller","mistery"]);
 
+$movies = [$movie_1]
 
-$movies = [$movie_1,$movie_2,$movie_3,$movie_4];
+// $movies = [$movie_1,$movie_2,$movie_3,$movie_4];
 
 ?>
 
@@ -49,7 +50,7 @@ $movies = [$movie_1,$movie_2,$movie_3,$movie_4];
             <?php foreach ($movies as $movie): ?>
             <div class="card col-3 m-3 p-3 text-center">
                 <h4><?php echo $movie->title ?></h4>
-                <p>Anno <?php echo $movie->year ?></p>
+                <p>Anno <?php echo $movie->publish_year ?></p>
                 <p>Voto <?php echo $movie->fixVote() ?></p>
                 <h6>Genere</h6>
                 <ul>

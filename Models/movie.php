@@ -1,28 +1,30 @@
 <?php
 
+include __DIR__ . './Production.php';
 
-class movie {
 
-    public $title;
+class movie extends Production {
 
-    public $year;
+    
 
-    public $vote;
+    public $publish_year;
 
-    public $genre;
+    public $duration;
 
    
     public function __construct(
 
         string $title,
-        int $year,
         float $vote,
-        genre $genre
+        genre $genre,
+        int $publish_year,
+        int $duration
+
     ){
-        $this->title = $title;
-        $this->year = $year;
-        $this->vote = $vote;
-        $this->genre = $genre;
+        parent::__construct($title,$vote,$genre);
+        $this->publish_year = $publish_year;
+        $this->duration = $duration;
+        
     }
 
 
