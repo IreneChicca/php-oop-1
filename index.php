@@ -63,6 +63,21 @@ $movies = [$movie_1]
             <?php endforeach; ?>
 
         </div>
+
+
+        <div class="card">
+            <h1>prova</h1>
+
+            <p>Voto <?php echo $movie->getDetails() ?></p>
+            <h6>Genere</h6>
+            <ul>
+                <?php  foreach($movie->genre->genre as $gen): ?>
+                <li><?php echo $gen  ?></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+
+
     </main>
 
 </body>

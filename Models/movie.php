@@ -28,6 +28,30 @@ class movie extends Production {
     }
 
 
+
+    public function getDetails(){
+
+            return "
+            <h4>Titolo:  $this->title </h4>             
+            <p>Anno:  $this->publish_year </p>
+            <p>Voto:  $this->vote </p>
+            <p>Durata:  $this->duration min </p>
+            ";
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
     public function fixVote(){
 
         if($this->vote > 5){
